@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Animation</title>
+  <style>
+    body {
+      margin: 0; 
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: orange;
+    }
+
+    /* Outer circle with animation */
+    .child1 {
+      height: 160px;
+      width: 160px;
+      background-color: yellow;
+      border-radius: 50%;
+      animation: shadow 1s 2s infinite; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Inner circle */
+    .child2 {
+      height: 150px;
+      width: 150px;
+      background-color: orangered;
+      border-radius: 80%;
+    }
+
+    /* Animation for child1 */
+    @keyframes shadow {
+      from {
+        height: 150px;
+        width: 150px;
+        box-shadow: 3px 4px 5px 5px yellow;
+      }
+      to {
+        height: 170px;
+        width: 170px;
+        box-shadow: 3px 4px 5px 5px yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="child1">
+    <div class="child2"></div>
+  </div>
+</body>
+</html>
